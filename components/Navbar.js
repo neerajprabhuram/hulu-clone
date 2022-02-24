@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="relative flex items-center">
       <div
-        className="flex px-10 py-5 sm:px-20 text-base sm:text-lg md:text-xl
+        className="flex px-10 py-5 sm:px-20 text-lg md:text-xl
         whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll 
         scrollbar-hide"
       >
@@ -15,8 +15,10 @@ const Navbar = () => {
           <h2
             key={key}
             onClick={() => router.push(`/?genre=${key}`)}
-            className="last:pr-12 cursor-pointer hover:scale-110
-            hover:text-white active:text-red-500"
+            className="last:mr-12 cursor-pointer hover:text-white active:text-[#26ffcc]
+              relative before:absolute before:transition-width before:duration-300 ease-out
+              before:h-[2px] before:right-0 before:bottom-[-5px] before:w-0 before:bg-[#26ffcc] 
+              before:hover:w-full before:hover:left-0 before:hover:right-auto"
           >
             {title}
           </h2>
