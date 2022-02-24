@@ -11,9 +11,11 @@ import {
 
 const Header = () => {
   return (
-    <header className='flex flex-col-reverse sm:flex-row justify-between 
-    items-center sm:items-end m-5 h-auto border'>
-      <div className='flex flex-grow justify-evenly max-w-2xl'>
+    <header
+      className="flex flex-col-reverse sm:flex-row justify-between 
+    items-center sm:items-end m-5 h-auto"
+    >
+      <div className="flex flex-grow justify-evenly max-w-2xl mt-5">
         <HeaderItem title="HOME" Icon={HomeIcon} />
         <HeaderItem title="TRENDING" Icon={LightningBoltIcon} />
         <HeaderItem title="VERIFIED" Icon={BadgeCheckIcon} />
@@ -22,7 +24,7 @@ const Header = () => {
         <HeaderItem title="ACCOUNT" Icon={UserIcon} />
       </div>
       <Image
-        className="object-contain "
+        className="object-contain"
         src="https://links.papareact.com/ua6"
         width={200}
         height={80}

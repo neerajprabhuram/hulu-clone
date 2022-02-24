@@ -8,20 +8,17 @@ export default function Home() {
     <div>
       <Head>
         <title>Hulu clone</title>
-        <meta name="description" content="Hulu clone is an OTT platform where you can 
-        watch the movies you like" />
+        <meta
+          name="description"
+          content="Hulu clone is an OTT platform where you can 
+        watch the movies you like"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Header */}
       <Header />
-
-      {/* Navbar */}
       <Navbar />
-
-      {/* Results */}
-      <Results/>
-      
+      <Results />
     </div>
   )
 }
