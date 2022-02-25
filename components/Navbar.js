@@ -7,19 +7,21 @@ const Navbar = () => {
   return (
     <nav className="relative flex items-center">
       <div
-        className="flex space-x-10 overflow-x-scroll whitespace-nowrap px-10 py-5
-        text-lg scrollbar-hide sm:space-x-20 sm:px-20 
+        className="flex space-x-10 overflow-x-scroll whitespace-nowrap 
+        px-10 py-5 text-lg scrollbar-hide sm:space-x-20 sm:px-20 
         md:text-xl"
       >
         {Object.entries(requests).map(([key, { title, url }]) => (
           <h2
             key={key}
             onClick={() => router.push(`/?genre=${key}`)}
-            className="before:transition-width relative cursor-pointer ease-out 
+            className={`before:transition-width relative cursor-pointer ease-out 
               before:absolute before:right-0 before:bottom-[-5px] before:h-[2px]
-              before:w-0 before:bg-[#26ffcc] before:duration-300 last:mr-12 
+              before:w-0 before:bg-[#26ffcc] before:duration-200 last:mr-12 
               hover:text-[#26ffcc] before:hover:left-0 before:hover:right-auto 
-              before:hover:w-full"
+              before:hover:w-full ${
+                router.asPath === `/?genre=${key}` ? 'text-[#26ffcc]' : ''
+              } `}
           >
             {title}
           </h2>
