@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import HeaderItem from './HeaderItem'
 import {
   BadgeCheckIcon,
@@ -12,10 +13,18 @@ import {
 const Header = () => {
   return (
     <header
-      className="flex flex-col-reverse sm:flex-row justify-between 
-    items-center sm:items-end m-5 h-auto"
+      className="m-5 flex h-auto flex-col justify-between
+      sm:flex-row sm:items-center"
     >
-      <div className="flex flex-grow justify-evenly max-w-2xl mt-5">
+      <Link href="/">
+        <Image
+          className="cursor-pointer object-contain"
+          src="https://links.papareact.com/ua6"
+          width={200}
+          height={80}
+        />
+      </Link>
+      <div className="mt-5 flex max-w-2xl flex-grow justify-evenly">
         <HeaderItem title="HOME" Icon={HomeIcon} />
         <HeaderItem title="TRENDING" Icon={LightningBoltIcon} />
         <HeaderItem title="VERIFIED" Icon={BadgeCheckIcon} />
@@ -23,12 +32,6 @@ const Header = () => {
         <HeaderItem title="SEARCH" Icon={SearchIcon} />
         <HeaderItem title="ACCOUNT" Icon={UserIcon} />
       </div>
-      <Image
-        className="object-contain"
-        src="https://links.papareact.com/ua6"
-        width={200}
-        height={80}
-      />
     </header>
   )
 }

@@ -1,9 +1,17 @@
 const HeaderItem = ({ Icon, title }) => {
   return (
-    <div className="flex flex-col items-center cursor-pointer group w-12 sm:w-20 
-    hover:text-white">
-      <Icon className="h-6 sm:h-8 mb-1 group-hover:animate-bounce"/>
-      <p className="text-xs sm:text-sm scale-0 group-hover:scale-100 tracking-widest">
+    <div
+      className="group flex w-12 cursor-pointer flex-col items-center 
+      hover:text-white sm:w-20"
+    >
+      <Icon
+        className="mb-1 h-6 transition duration-200 group-hover:scale-110
+        group-hover:stroke-[#26ffcc] md:h-7 xl:h-8"
+      />
+      <p
+        className="scale-0 text-xs tracking-widest text-[#26ffcc] 
+        transition duration-200 group-hover:scale-100 sm:text-sm"
+      >
         {title}
       </p>
     </div>
